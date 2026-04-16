@@ -1,65 +1,78 @@
 # Employee Management System
 
-A simple and clean React based web application to manage employees and track assigned tasks through a dashboard.
-
-This project focuses on building a real world UI using reusable components and global state management.
-
----
-
-## Live Demo
-https://cerulean-seahorse-78e33d.netlify.app/
-
-Demo Login
-Email: admin@me.com
-Password: 123
-
----
+A simple React + Vite employee task management app with admin and employee login flows.
 
 ## Features
-- Add employees
-- Assign tasks
-- Track task status
-- Dashboard overview
-- Responsive UI
-- Reusable components
 
----
+- Admin login and employee login
+- Employee task overview and status cards
+- Admin task creation and employee assignment
+- Local storage persistence for employee and login data
+- Tailwind CSS for responsive UI styling
 
 ## Tech Stack
-React.js  
-Vite  
-Tailwind CSS  
-JavaScript (ES6)  
-Context API
 
----
+- React 19
+- Vite
+- Tailwind CSS
+- JavaScript
 
-## What I Learned
-- Managing global state using Context API
-- Building reusable React components
-- Creating responsive layouts
-- Structuring frontend project properly
-- Improving UI clarity and usability
+## Local Setup
 
----
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Run Locally
+2. Start the app:
+   ```bash
+   npm run dev
+   ```
 
-git clone https://github.com/HimanshuPaswan-2004/Employee-Management-System
-cd Employee-Management-System
-npm install
-npm run dev
+3. Open the local app in the browser at the port shown in the terminal.
+   - If `5173` is already in use, Vite may use another port such as `5174`.
 
----
+## Login Credentials
 
-## Future Improvements
-- Backend integration
-- Authentication system
-- Admin & Employee roles
-- Database storage
+### Admin
+- Email: `admin@me.com`
+- Password: `123`
 
----
+### Employee
+- Email: `e@e.com`
+- Password: `123`
 
-## Author
-Himanshu Paswan
+> Additional employee accounts are defined in `src/utils/localStorage.jsx`.
+
+## Important Notes
+
+- The app stores users and tasks in browser `localStorage`.
+- If the login page does not appear locally, check the terminal for the actual Vite port.
+- The project uses a dark theme by default, so the login form appears on a black background.
+
+## Deployment
+
+This project can be deployed to platforms like Netlify or Vercel.
+
+- Build for production:
+  ```bash
+  npm run build
+  ```
+
+- Serve the production build locally with a static server if needed.
+
+## Project Structure
+
+- `src/App.jsx` — main app routing and login logic
+- `src/main.jsx` — app entry and context provider
+- `src/components/Auth/Login.jsx` — login form
+- `src/components/Dashboard/` — admin and employee dashboards
+- `src/context/` — authentication context provider
+- `src/utils/localStorage.jsx` — sample employee data and storage helpers
+
+## Troubleshooting
+
+- If the login is not working, clear browser local storage and reload the page.
+- If the app shows a black screen, verify that the login page is rendered and the correct Vite port is opened.
+- Check browser console for any runtime errors.
 
